@@ -1,0 +1,11 @@
+9/30
+1) We initialized the project idea and discussed the overall structure of the software.
+We added github issues to the github repository. We split into two teams:
+one team will work on making the structure of the json file that will keep all 
+information about the personal expenses. 
+The other team will be working on the main menu of the software, which will take
+inputs from the user for the budgets.
+
+2) We plan to keep working on our teams to develop the main menu and the structure of the JSON file.
+
+3) We have just started the development progress. We currently don't have any issues. 
