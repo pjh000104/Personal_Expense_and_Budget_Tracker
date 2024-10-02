@@ -14,6 +14,7 @@ def start_software():
             print("Error entering value")
 
     for c in categories:
+        print("Enter expense for " + c + ": ")
         while True:
             expense = input()
             if is_float(totalExpense):
