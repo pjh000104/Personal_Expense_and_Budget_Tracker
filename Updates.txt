@@ -9,3 +9,14 @@ inputs from the user for the budgets.
 2) We plan to keep working on our teams to develop the main menu and the structure of the JSON file.
 
 3) We have just started the development progress. We currently don't have any issues. 
+
+10/02
+1) We finished building a feature that initializes a JSON file in the user's project directory and
+also added a dictionary with all the categories which we will use to reference and change data later
+down the project.
+
+2) We plan to now create a User Interface where users  can input their initial total budget goal 
+alongside having the user input the budget for categories while also answering complications such 
+as all of the budget of the categories not being higher than the total budget.
+
+3) We have not run into any issues as of right now.
