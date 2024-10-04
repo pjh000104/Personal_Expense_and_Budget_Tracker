@@ -1,4 +1,5 @@
 import json
+from mm import start_main_menu
 
 
 def start_software():
@@ -62,4 +63,7 @@ def get_data():
     with open('info.json', 'r') as file:
         data = json.load(file)
         return data
+
+
 start_software()
+start_main_menu()
