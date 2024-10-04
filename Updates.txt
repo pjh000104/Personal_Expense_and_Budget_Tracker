@@ -20,3 +20,14 @@ alongside having the user input the budget for categories while also answering c
 as all of the budget of the categories not being higher than the total budget.
 
 3) We have not run into any issues as of right now.
+
+10/4
+1) We finisehd combining the ui of initializing the project with writing the JSON files. Now when the
+program starts, it will ask for the user for the total budget and the budget for sub categories.
+
+2) We will keep working on validation of inputs(ex: if budget for each categories are less than the total budget),
+and we will keep working on the main menu.
+
+3) We are struggling how to divide the features into each group member since all parts of the program are connected.
+
+
