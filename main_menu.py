@@ -1,9 +1,7 @@
 import json
 
-
 def start_software():
-    expenses = {'total': ' '
-                }
+    expenses = {'total': ' '}
     
     create_file()
     data = get_data()
@@ -19,25 +17,62 @@ def start_software():
         totalExpense = input()
 
         if is_float(totalExpense):
-            expenses[totalExpense] = totalExpense
-            data["total_balance"] = totalExpense
+            expenses['total'] = totalExpense
+            data["total_balance"] = float(totalExpense)
             break
         else:
             print("Error entering value")
 
     for c in categories:
-        print("Enter expense for " + c + ": ")
+        print("Enter initial expense for " + c + ": ")
         while True:
             expense = input()
-            if is_float(totalExpense):
-                data[c] = expense
-                expenses[c] = expense
+            if is_float(expense):
+                data[c] = float(expense)
+                expenses[c] = float(expense)
                 break
             else:
                 print("Error entering value")
-    with open("info.json", "w") as file:
-        json.dump(data, file)
 
+    while True:
+        print("\nPlease select an option:")
+        print("1. Add expense")
+        print("2. Display updated balances")
+        print("3. Exit")
+        option = input()
+
+        if option == "1":
+            for c in categories:
+                print("Enter amount spent for " + c + ": ")
+                while True:
+                    spent_amount = input()
+                    if is_float(spent_amount):
+                        result = subtract_expense(data, c, float(spent_amount))
+                        if result:
+                            print(f"Updated balance for {c}: {data[c]}")
+                            with open("info.json", "w") as file:
+                                json.dump(data, file)
+                            break
+                        else:
+                            print("You don't have enough balance in this category.")
+                            break
+                    else:
+                        print("Error entering value")
+        elif option == "2":
+            print("\nUpdated balances for each category:")
+            for c in categories:
+                print(f"{c}: {data[c]}")
+        elif option == "3":
+            break
+        else:
+            print("Invalid option. Please select a valid option.")
+
+def subtract_expense(data, category, amount):
+    if data[category] - amount < 0:
+        return False
+    else:
+        data[category] -= amount
+        return True
 
 def is_float(value):
     try:
