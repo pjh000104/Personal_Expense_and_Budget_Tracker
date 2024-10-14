@@ -3,36 +3,21 @@ from mm import start_main_menu
 
 
 def start_software():
-    expenses = {'total': ' '
-                }
-    
     create_file()
     data = get_data()
 
     categories = ['total_balance', 'food', 'house_hold', 'clothing', 
                   'personal_expense', 'subscription',
                   'housing_expense', 'insurance', 'other']
-    
+
     print("Hello welcome to the Personal_Expense")
-
-    while True:
-        print("Please enter the total expense: ")
-        totalExpense = input()
-
-        if is_float(totalExpense):
-            expenses[totalExpense] = totalExpense
-            data["total_balance"] = totalExpense
-            break
-        else:
-            print("Error entering value")
 
     for c in categories:
         print("Enter expense for " + c + ": ")
         while True:
             expense = input()
-            if is_float(totalExpense):
+            if is_float(expense):
                 data[c] = expense
-                expenses[c] = expense
                 break
             else:
                 print("Error entering value")
