@@ -30,4 +30,11 @@ and we will keep working on the main menu.
 
 3) We are struggling how to divide the features into each group member since all parts of the program are connected.
 
+10/14
+1) We are still working on validation of inputs. We only have validation working for the total amount of budget. We are working on the main menu of the program that will have options for spending money, checking budget status for each category, resetting the program, and exicting the program.
 
+2) Each of the team members will work on different features. Pem: valdiation, Atomu: program reset, Saleh: checking budget status, Jungho: main menu
+
+3) We do not have any issues for now.
+
+2) We will keep working on validation of inputs. 
