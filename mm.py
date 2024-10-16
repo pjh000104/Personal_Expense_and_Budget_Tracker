@@ -15,9 +15,9 @@ def start_main_menu():
             print("Error entering value")
     if option == '1':
         useMoney()
-    # elif option == 2:
-    #     checkBalance()
-    elif option == '3':
+    elif option == '2':
+        checkBalance()
+    elif option == 3:
         reset()
     elif option == '4':
         print("quitting Program byebye")
@@ -40,8 +40,16 @@ def useMoney():
 
     print(category, "has $", data[category], "left.")
     start_main_menu()
+    # a finction to check the balance written by saleh
 
 
+def checkBalance():
+    data = get_data()
+    print("Current Balance:")
+    for category, balance in data.items():
+        print(f"{category}: ${balance}")
+    start_main_menu()
+ #end of function
 def is_float(value):
     try:
         # Try to convert the value to a float
