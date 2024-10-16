@@ -40,4 +40,8 @@ and we will keep working on the main menu.
 2) We will keep working on validation of inputs. 
 
 10/16/2024
-Test1
+1) We figured out the way to reset the program by restarting the program when the user chooses to do so. 
+
+2) We are planning to keep working on the main menu. 
+
+3) We have not run into any issues.
