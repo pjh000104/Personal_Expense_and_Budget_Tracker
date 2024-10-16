@@ -55,8 +55,8 @@ Jungho
 3) Merge conflicts since I was working on the same branch as Saleh, but we resolved it.
 
 Pem
-1) Worked on an algorithm to check the validity of the user's input to make user it does not exceed the total budget
+1) Worked on an algorithm to check the validity of the user's input to make user it does not exceed the total budget.
 
-2) Accomplished it though if conditions.
+2) Almost finished it through if condition.
 
-3) No roadblock as of right now.
+3) The program starts to bug out if the user has already inputted exactly the total budget.
