@@ -53,3 +53,10 @@ Jungho
 2) Trying to make unit tests.
 
 3) Merge conflicts since I was working on the same branch as Saleh, but we resolved it.
+
+Pem
+1) Worked on an algorithm to check the validity of the user's input to make user it does not exceed the total budget
+
+2) Accomplished it though if conditions.
+
+3) No roadblock as of right now.
