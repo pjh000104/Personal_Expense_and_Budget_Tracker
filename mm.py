@@ -17,8 +17,8 @@ def start_main_menu():
         useMoney()
     # elif option == 2:
     #     checkBalance()
-    # elif option == 3:
-    #     resetProgram()
+    elif option == '3':
+        reset()
     elif option == '4':
         print("quitting Program byebye")
         return
@@ -56,3 +56,8 @@ def get_data():
     with open('info.json', 'r') as file:
         data = json.load(file)
         return data
+
+
+def reset():
+    from main_menu import start_software
+    start_software()
