@@ -60,3 +60,9 @@ Pem
 2) Almost finished it through if condition.
 
 3) The program starts to bug out if the user has already inputted exactly the total budget.
+
+Saleh 
+1) Worked on check balance meethod to check the balance left for each catagory.
+2) Merge conflicts with Jungho but we resolved it.
+3) working on errors if the user entered a String instead of a number in the amount of money expenses.
+4) working on showing the total balance left after checking the balance for each category
