@@ -5,19 +5,32 @@ from mm import start_main_menu
 def start_software():
     create_file()
     data = get_data()
-
+    check = 0
+    count = 0
+    sent = 0
+    validity = 0
+    
     categories = ['total_balance', 'food', 'house_hold', 'clothing', 
                   'personal_expense', 'subscription',
                   'housing_expense', 'insurance', 'other']
-
     print("Hello welcome to the Personal_Expense")
-
+    
+    
     for c in categories:
         print("Enter expense for " + c + ": ")
         while True:
             expense = input()
             if is_float(expense):
-                data[c] = expense
+                data[c] = int(expense)
+                if count != 0:
+                    check += int(expense)
+                    count += 1
+                    print(check)
+                if check > int(data['total_balance']):
+                    print("Your budgeting exceeded the total budget")
+                    data[c] = input ("Please enter expense for " + c + " again: ")
+                    check = check -int(expense)+ int(data[c])
+                count += 1    
                 break
             else:
                 print("Error entering value")
