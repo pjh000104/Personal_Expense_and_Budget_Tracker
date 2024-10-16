@@ -17,7 +17,7 @@ def start_main_menu():
         useMoney()
     elif option == '2':
         checkBalance()
-    elif option == 3:
+    elif option == '3':
         reset()
     elif option == '4':
         print("quitting Program byebye")
