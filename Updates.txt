@@ -66,3 +66,4 @@ Saleh
 2) Merge conflicts with Jungho but we resolved it.
 3) working on errors if the user entered a String instead of a number in the amount of money expenses.
 4) working on showing the total balance left after checking the balance for each category
+5) working on program bugs 
