@@ -69,10 +69,16 @@ Saleh
 5) working on program bugs 
 
 10/18/2024
-Pem
+Pem/Saleh
 1) Worked on the same algorithm as last week which focuses on making the for loop reset and ask the user for the inputs again if all the categories added up are greater than the total budget.
 
 2) Managed to complete it through resetting the counting index in the for loop and pushing it to pem_branch.
 
 3) No roadblocks as of right now.
 
+Jungho/Atomu
+1) Kept working on unit tests
+
+2) Planning to keep working on unit testing.
+
+3) Command is not working when running Unit tests
