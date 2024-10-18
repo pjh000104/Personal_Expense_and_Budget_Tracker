@@ -67,3 +67,12 @@ Saleh
 3) working on errors if the user entered a String instead of a number in the amount of money expenses.
 4) working on showing the total balance left after checking the balance for each category
 5) working on program bugs 
+
+10/18/2024
+Pem
+1) Worked on the same algorithm as last week which focuses on making the for loop reset and ask the user for the inputs again if all the categories added up are greater than the total budget.
+
+2) Managed to complete it through resetting the counting index in the for loop and pushing it to pem_branch.
+
+3) No roadblocks as of right now.
+
