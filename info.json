@@ -1,1 +1,1 @@
-{"total_balance": 1000, "food": 300, "house_hold": 200, "clothing": 400, "personal_expense": "10", "subscription": 10, "housing_expense": "20", "insurance": 10, "other": 50}
+{"total_balance": "1000", "food": 10, "house_hold": 20, "clothing": 30, "personal_expense": 40, "subscription": 50, "housing_expense": 60, "insurance": 70, "other": 80}

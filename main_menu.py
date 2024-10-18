@@ -9,31 +9,31 @@ def start_software():
     count = 0
     sent = 0
     validity = 0
+    sent = True
     
     categories = ['total_balance', 'food', 'house_hold', 'clothing', 
                   'personal_expense', 'subscription',
                   'housing_expense', 'insurance', 'other']
     print("Hello welcome to the Personal_Expense")
     
-    
-    for c in categories:
-        print("Enter expense for " + c + ": ")
-        while True:
-            expense = input()
+    data['total_balance'] = input("What is your total budget: " )
+    while sent == True:    
+        for c in range(1, len(categories)):
+            expense = input("Enter expense for " + categories[c] + ": ")
             if is_float(expense):
-                data[c] = int(expense)
-                if count != 0:
-                    check += int(expense)
-                    count += 1
-                    print(check)
-                if check > int(data['total_balance']):
-                    print("Your budgeting exceeded the total budget")
-                    data[c] = input ("Please enter expense for " + c + " again: ")
-                    check = check -int(expense)+ int(data[c])
-                count += 1    
-                break
+                data[categories[c]] = int(expense)
+                check += int(expense)
+                count += 1
+                print(check)
             else:
                 print("Error entering value")
+                break
+            if check > int(data['total_balance']):
+                print("Your budgeting exceeded the total budget, please re-enter all the values again")
+                check = 0
+                break   
+            if categories[c] == 'other':
+                sent = False
     with open("info.json", "w") as file:
         json.dump(data, file)
 
