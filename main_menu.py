@@ -5,25 +5,27 @@ from mm import start_main_menu
 def start_software():
     create_file()
     data = get_data()
-    check = 0
-    count = 0
-    sent = 0
-    validity = 0
-    sent = True
     
+    sent = True;
+    check = 0;
+
     categories = ['total_balance', 'food', 'house_hold', 'clothing', 
                   'personal_expense', 'subscription',
                   'housing_expense', 'insurance', 'other']
+
     print("Hello welcome to the Personal_Expense")
     
-    data['total_balance'] = input("What is your total budget: " )
-    while sent == True:    
+    data['total_balance'] = input("What is your total budget for this month: " )
+    while sent == True:
         for c in range(1, len(categories)):
+            if categories[c] == 'other':
+                data['other'] = int(data['total_balance']) -check
+                sent = False
+                break
             expense = input("Enter expense for " + categories[c] + ": ")
             if is_float(expense):
                 data[categories[c]] = int(expense)
                 check += int(expense)
-                count += 1
                 print(check)
             else:
                 print("Error entering value")
@@ -32,8 +34,6 @@ def start_software():
                 print("Your budgeting exceeded the total budget, please re-enter all the values again")
                 check = 0
                 break   
-            if categories[c] == 'other':
-                sent = False
     with open("info.json", "w") as file:
         json.dump(data, file)
 
@@ -65,3 +65,5 @@ def get_data():
 
 start_software()
 start_main_menu()
+
+
