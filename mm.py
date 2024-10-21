@@ -9,18 +9,25 @@ def start_software():
                   'housing_expense', 'insurance', 'other']
 
     print("Hello, welcome to the Personal Expense Tracker")
-
+    sumBalance = 0
     for c in categories:
         while True:
             expense = input(f"Enter expense for {c}: ")
             if is_float(expense):
                 data[c] = float(expense)  # Store as float
+                sumBalance += data[c]
                 break
             else:
                 print("Error entering value. Please enter a valid number.")
-
+    print("printing sum balance data: ", sumBalance)
+    print("printing total_balance: ", data["total_balance"])
+    data["left"] = data["total_balance"]-(sumBalance-data["total_balance"])
+    
+    print("printing data")
+    print(data)
     with open("info.json", "w") as file:
         json.dump(data, file)
+
 
 def start_main_menu():
     print("Choose your Option: ")
@@ -45,6 +52,7 @@ def start_main_menu():
     elif option == '4':
         print("Quitting Program. Bye bye!")
         return
+
 
 def useMoney():
     data = get_data()
@@ -80,9 +88,10 @@ def useMoney():
 
     start_main_menu()
 
+
 def checkBalance():
     data = get_data()
-    total_balance = sum(float(amount) for amount in data.values())
+    total_balance = sum(float(amount) for amount in data.values())-data["total_balance"]
     
     print("Balance for each category:")
     for category, amount in data.items():
@@ -119,10 +128,20 @@ def get_data():
         create_file()  # Create a new file with default values
         return get_data()  # Retry getting data
 
+
 def reset():
+    # Clear the data in the JSON file
     create_file()
     print("Data has been reset to default values.")
-    start_main_menu()
+
+    # Optionally, ask the user if they want to restart the software
+    restart = input("Would you like to start the program again? (yes/no): ").strip().lower()
+    if restart == 'yes':
+        start_software()
+    else:
+        print("Returning to main menu.")
+        start_main_menu()
+
 
 if __name__ == "__main__":
     start_software()
