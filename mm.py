@@ -22,7 +22,8 @@ def start_software():
     print("printing sum balance data: ", sumBalance)
     print("printing total_balance: ", data["total_balance"])
     data["left"] = data["total_balance"]-(sumBalance-data["total_balance"])
-    
+    if sumBalance-data["total_balance"] > data["total_balance"]:
+        reset()
     print("printing data")
     print(data)
     with open("info.json", "w") as file:
@@ -91,7 +92,7 @@ def useMoney():
 
 def checkBalance():
     data = get_data()
-    total_balance = sum(float(amount) for amount in data.values())-data["total_balance"]
+    total_balance = sum(float(amount) for amount in data.values())-float(data["total_balance"])
     
     print("Balance for each category:")
     for category, amount in data.items():
@@ -133,14 +134,7 @@ def reset():
     # Clear the data in the JSON file
     create_file()
     print("Data has been reset to default values.")
-
-    # Optionally, ask the user if they want to restart the software
-    restart = input("Would you like to start the program again? (yes/no): ").strip().lower()
-    if restart == 'yes':
-        start_software()
-    else:
-        print("Returning to main menu.")
-        start_main_menu()
+    start_software()
 
 
 if __name__ == "__main__":
