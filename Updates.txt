@@ -89,4 +89,4 @@ Pem/Atomu
 
 2) Keep working on the validation on the updated code created by Jungho and Saleh. 
 
-3) No issues for now. 
+3) The reset is not working with the updated code.
