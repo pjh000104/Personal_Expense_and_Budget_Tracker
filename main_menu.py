@@ -21,15 +21,15 @@ def start_software():
             if categories[c] == 'other':
                 data['other'] = int(data['total_balance']) -check
                 sent = False
-                break
-            expense = input("Enter expense for " + categories[c] + ": ")
-            if is_float(expense):
-                data[categories[c]] = int(expense)
-                check += int(expense)
-                print(check)
-            else:
-                print("Error entering value")
-                break
+                break 
+            while True:
+                expense = input("Enter expense for " + categories[c] + ": ")
+                if is_float(expense):
+                    data[categories[c]] = int(expense)
+                    check += int(expense)
+                    break
+                else:
+                    print("Error entering value")
             if check > int(data['total_balance']):
                 print("Your budgeting exceeded the total budget, please re-enter all the values again")
                 check = 0
