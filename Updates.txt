@@ -105,3 +105,10 @@ Jungho/Saleh
 2) Planning to work on tests
 
 3) No issues for now
+
+Pem/Atomu
+1) Fixed an error where the total balance would accept other values than float and integer
+
+2) We also plan to work on tests.
+
+3) No roadblocks as of right now.
