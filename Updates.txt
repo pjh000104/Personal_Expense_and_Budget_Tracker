@@ -90,3 +90,18 @@ Pem/Atomu
 2) Keep working on the validation on the updated code created by Jungho and Saleh. 
 
 3) The reset is not working with the updated code.
+
+Jungho/Saleh
+1) Fixed minor bugs in main menu
+
+2) kept working on code created by Pem and Atomu
+
+3) Issues merging Pem's branch
+
+10/23/2024
+Jungho/Saleh
+1) Integrated validation to main_menu_ui branch and fixed bug with reset
+
+2) Planning to work on tests
+
+3) No issues for now
