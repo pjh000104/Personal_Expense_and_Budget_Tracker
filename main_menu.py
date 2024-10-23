@@ -15,7 +15,15 @@ def start_software():
 
     print("Hello welcome to the Personal_Expense")
     
-    data['total_balance'] = input("What is your total budget for this month: " )
+    while True:
+        total_balance = input("What is your total budget for this month: " )
+        if is_float(total_balance):
+            data['total_balance'] = total_balance
+            break
+        else:
+            print("Please input an integer or float")
+        
+        
     while sent == True:
         for c in range(1, len(categories)):
             if categories[c] == 'other':
