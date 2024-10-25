@@ -112,3 +112,11 @@ Pem/Atomu
 2) We also plan to work on tests.
 
 3) No roadblocks as of right now.
+
+10/25/2024
+Pem/Saleh/Atomu/Jungho
+1) Presented the application to the whole class.
+
+2) Fixed the issue where the categories do not accept floats.
+
+3) No issues as of right now.
