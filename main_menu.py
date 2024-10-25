@@ -33,8 +33,8 @@ def start_software():
             while True:
                 expense = input("Enter expense for " + categories[c] + ": ")
                 if is_float(expense):
-                    data[categories[c]] = int(expense)
-                    check += int(expense)
+                    data[categories[c]] = float(expense)
+                    check += float(expense)
                     break
                 else:
                     print("Error entering value")
